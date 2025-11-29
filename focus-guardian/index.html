@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Guardian - Smart Interruption Manager</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#6b21a8', // Deep purple
+                            blue: '#3b82f6',   // Bright blue
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(110deg, #4f35e8 0%, #4361ee 50%, #3a86ff 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Fade Effect for Header Bottom */
+        .fade-bottom {
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+        }
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+    <header class="relative bg-hero-gradient text-white pt-20 pb-32 lg:pb-40 overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+            
+            <div class="flex-1 max-w-xl text-center md:text-left">
+                <div class="font-bold text-lg mb-0.5">Focus Guardian</div>
+                <span class="text-sm opacity-80 block mb-6">Smart Interruption Manager</span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Innovative Automation Solutions
+                </h1>
+                
+                <p class="text-base md:text-lg opacity-90 leading-relaxed mb-8 font-light">
+                    Focus Guardian is a smart automation bot built using Zoho SalesIQ. It helps businesses handle customer messages intelligently by prioritizing urgent chats, queuing non-urgent requests, and reducing unnecessary interruptions during busy or focus hours.
+                </p>
+                
+                <a href="#" class="inline-block bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+                    Start Chat with Focus Guardian
+                </a>
+            </div>
+
+            <div class="flex-1 w-full flex justify-center md:justify-end">
+                <div class="relative w-full max-w-lg">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=100" 
+                         alt="AI Robots" 
+                         class="rounded-2xl shadow-2xl w-full object-cover h-auto border-1 border-white/10 backdrop-blur-sm">
+                    </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-24 md:h-32 fade-bottom z-0"></div>
+    </header>
+
+    <section class="relative z-20 -mt-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-2xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-3">Urgent Message Prioritization</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Instantly detects and prioritizes high-importance messages for faster response.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-3">Smart Agent Availability</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Automatically checks agent availability and routes chats efficiently.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-3">Focus Time Interruption Control</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Prevents unnecessary interruptions during high-productivity periods.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-3">Secure Query Queue System</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Safely stores and manages non-urgent queries in an encrypted queue.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10">Follow these simple steps  👇</h2>
+            
+            <div class="space-y-4 text-left">
+                <div class="bg-white border border-gray-100 p-4 rounded-xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-6 h-6 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs shrink-0">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium text-sm">Click the chat icon to start</span>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-4 rounded-xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-6 h-6 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs shrink-0">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium text-sm">Tell the bot what you need</span>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-4 rounded-xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-6 h-6 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs shrink-0">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium text-sm">The bot will respond instantly</span>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-4 rounded-xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-6 h-6 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs shrink-0">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium text-sm">High-priority messages are handled first</span>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-4 rounded-xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-6 h-6 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-500 flex items-center justify-center text-xs shrink-0">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium text-sm">A support agent will join when available</span>
+                </div>
+            </div>
+
+            <div class="mt-12 text-xl text-gray-450 flex items-center justify-center gap-2">
+                <span>👉</span> To test the Focus Guardian bot, please click the chat icon at the bottom-right corner of this page.
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 pt-16 pb-8 px-6 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+                
+                <div class="flex-1 md:max-w-sm">
+                    <h4 class="font-bold text-gray-900 mb-1">Focus Guardian</h4>
+                    <span class="text-xs text-gray-500 block mb-4">Smart Interruption Manager</span>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Focus Guardian is a student-built intelligent Zobot using Zoho SalesIQ that demonstrates smart interruption management, agent availability handling, and urgent message prioritization.
+                    </p>
+                </div>
+
+                <div class="flex-1 md:max-w-[200px]">
+                    <h4 class="font-bold text-gray-900 text-sm mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-indigo-600 transition-colors">Home</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-indigo-600 transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex-1 md:max-w-[200px]">
+                    <h4 class="font-bold text-gray-900 text-sm mb-4">Terms</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-indigo-600 transition-colors">Security & Privacy</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-indigo-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-indigo-600 transition-colors">Private Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center text-[10px] text-gray-400 pt-8 border-t border-slate-200">
+                © 2025 Focus Guardian. A Student Project. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siqca660c31731e8095d1244b72b0e417b29fa24438b9327bafbb6f806a9e06cc42" defer></script>
+
+    </body>
+</html>
